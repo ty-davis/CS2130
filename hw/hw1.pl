@@ -44,5 +44,5 @@ sisterof(Sis, Sib) :- siblings(Sis, Sib), female(Sis).
 ancestor_of(A,B) :- parentof(A,B).
 ancestor_of(A,B) :- parentof(A,C), ancestor_of(C,B).
 
-ancestor_gen(A,B,G) :- parentof(A,B), G is 1.
+ancestor_gen(A,B,G) :- parentof(A,B), G is 0.
 ancestor_gen(A,B,G) :- parentof(A,C), ancestor_gen(C,B,F), G is F + 1.
